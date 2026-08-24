@@ -11,6 +11,8 @@ os.environ['OPT'] = " ".join(
 
 setup(
     name='sptr',
+    packages=['sptr'],
+    install_requires=['timm'],
     ext_modules=[
         CUDAExtension('sptr_cuda', [
             'src/sptr/pointops_api.cpp',
